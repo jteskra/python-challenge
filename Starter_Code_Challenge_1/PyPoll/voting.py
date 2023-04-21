@@ -1,7 +1,7 @@
 import os
 import csv
 
-createfilepath =  os.path.join('analysis', 'PyPollAnalysis.txt')
+analysis_file_path =  os.path.join('analysis', 'PyPollAnalysis.txt')
 election_data_csv = os.path.join("Resources", "election_data.csv")
 
 
@@ -37,7 +37,7 @@ with open(election_data_csv, newline='') as csv_file:
 
 # print results
 
-	print("Election Results/n")
+	print("Election Results")
 	print("------------------------")
 	print(f"Total Votes: {votecount}")
 	print("------------------------")
@@ -49,18 +49,18 @@ with open(election_data_csv, newline='') as csv_file:
 	print("Winner:", winner)
 	print("------------------------")
 
-# with open(createfilepath, "w") as f:
-# 	f.write("Election Results\n")
-# 	f.write("------------------------\n")
-# 	f.write(f"Total Votes: {votecount}"+"\n")
-# 	f.write("------------------------"+"\n")
+with open(create_file_path, "w") as f:
+	f.write("Election Results\n")
+	f.write("------------------------\n")
+	f.write(f"Total Votes: {votecount}"+"\n")
+	f.write("------------------------"+"\n")
 	
-# 	f.write(f"Charles Casper Stockham:", percentcharles_1,"%", {canidates['Charles Casper Stockham']})
-# 	f.write(f"Diana DeGette:", percentdiana_1,"%", {canidates['Diana DeGette']} +"\n")
-# 	f.write(f"Raymon Anthony Doane:", percentraymon_1,"%", {canidates['Raymon Anthony Doane']}+"\n")
-# 	f.write("------------------------")
-# 	f.write("Winner:", winner +"\n")
-# 	f.write("------------------------")
+	f.write(f"Charles Casper Stockham:", percentcharles_1,"%", {canidates['Charles Casper Stockham']})
+	f.write(f"Diana DeGette:", percentdiana_1,"%", {canidates['Diana DeGette']} +"\n")
+	f.write(f"Raymon Anthony Doane:", percentraymon_1,"%", {canidates['Raymon Anthony Doane']}+"\n")
+	f.write("------------------------")
+	f.write("Winner:", winner +"\n")
+	f.write("------------------------")
 
 	
 
